@@ -533,6 +533,8 @@ class CreditCardInput extends Component<Props, State> {
                 placeholder:
                   customTextLabels.cardNumberPlaceholder || 'Card number',
                 type: 'tel',
+                'aria-label':
+                  customTextLabels.cardNumberPlaceholder || 'Card number',
                 ...cardNumberInputProps,
                 onBlur: this.handleCardNumberBlur(),
                 onChange: this.handleCardNumberChange(),
@@ -560,6 +562,7 @@ class CreditCardInput extends Component<Props, State> {
                 autoComplete: 'cc-exp',
                 className: `credit-card-input ${inputClassName}`,
                 placeholder: customTextLabels.expiryPlaceholder || 'MM/YY',
+                'aria-label': customTextLabels.expiryPlaceholder || 'MM/YY',
                 type: 'tel',
                 ...cardExpiryInputProps,
                 onBlur: this.handleCardExpiryBlur(),
@@ -589,6 +592,7 @@ class CreditCardInput extends Component<Props, State> {
                 autoComplete: 'off',
                 className: `credit-card-input ${inputClassName}`,
                 placeholder: customTextLabels.cvcPlaceholder || 'CVC',
+                'aria-label': customTextLabels.cvcPlaceholder || 'CVC',
                 type: 'tel',
                 ...cardCVCInputProps,
                 onBlur: this.handleCardCVCBlur(),
@@ -618,6 +622,7 @@ class CreditCardInput extends Component<Props, State> {
                 className: `credit-card-input zip-input ${inputClassName}`,
                 pattern: '[0-9]*',
                 placeholder: customTextLabels.zipPlaceholder || 'Zip',
+                'aria-label': customTextLabels.zipPlaceholder || 'Zip',
                 type: 'text',
                 ...cardZipInputProps,
                 onBlur: this.handleCardZipBlur(),
